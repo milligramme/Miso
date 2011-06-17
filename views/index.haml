@@ -1,0 +1,15 @@
+%h1 Mix Char!?
+%form{"accept-charset" => "utf-8", :action => "/calc", :method => "get"}
+  %input{:name => "query1", :value => "助"}/
+  %select{:name => 'calc'}
+    %option{:value => "+", :selected => "selected"} +
+    %option{:value => "-"} -
+    %option{:value => "*"} *
+    %option{:value => "/"} ÷
+    
+  %input{:name => "query2", :value => "六"}/
+  
+    
+  %input{:type => "submit", :value => "Calc"}/
+%p
+  感じを人もじずつ入力しテクださい
