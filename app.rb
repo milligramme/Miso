@@ -40,7 +40,7 @@ get '/calc' do
   query2 = params[:query2]
   calc = params[:calc]
   char_code_10 = calc_sign(charcode_array(query1, query2), calc)
-  @result = [ query1, calc, query2, "=","(",char_code_10.to_s(16),")", [char_code_10].pack("U")[0] ].join(' ')
+  @result = [ query1, calc, query2, "=", [char_code_10].pack("U")[0],"(",char_code_10.to_s(16),")" ].join(' ')
   # @result = [query1, calc, query2, "=", char_code_10].join(' ')
   haml :result
 end
